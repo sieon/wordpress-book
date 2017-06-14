@@ -1,0 +1,36 @@
+# 写一个自己的WordPress主题
+
+## 写给谁
+没有特定对象，人人均可学习，但如果你没有html和css的基础，建议到这里学习。
+
+## 谁学快
+
+- 初级：熟练HTMl+CSS
+- 进阶：Javascript
+- 高级：PHP
+
+## 基础
+
+WordPres的主题存放在 wp-content/themes/ 文件下，每一个文件夹对应一个主题；
+
+每个主题文件夹中常见文件介绍：
+1. style.css：该文件包含模板的一些基础介绍信息和博客的样式，介绍信息会在WordPess后台主题中显示，该文件必须有；
+2. index.php：这是主题的首页，该文件必须有；
+3. footer.php、header.php：这两个是主题的公共头和尾；
+4. single.php：显示文章内容；
+
+通常情况下，上面几个文件已经完全可以完成一个主题，但大部分主题还包括以下文件：
+
+5. archive.php：归档页面模板，例如：分类、标签、作者、日期等；
+6. category.php：文章目录的模板，在改文件不存在，wordpress会用archive显示分类内容；
+6. tag.php：标签的模板，在该文件不存在时，wordpress会用archive显示标签页面内容；
+7. author.php：作者页面模板，在该文件不存在时，wordpress会用archive显示标签页面内容；
+8. date.php：日期归档页面模板，在该文件不存在时，wordpress会用archive显示标签页面内容；
+9. function.php：扩展主题功能的函数放在这个文件里；
+
+### 模板等级介绍
+当用户访问时，WordPress是如何判定用哪个文件显示内容的呢？在这方面，WordPress本身自带一个漂亮的模板核心。下图是WordPress官网的模板等级介绍图：
+
+
+
+
