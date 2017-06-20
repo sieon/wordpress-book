@@ -2,7 +2,7 @@
 
 ** 这一节对理解模板等级非常重要。**
 
-在 wordpress 中有很多不同的内容类型。这些内容类型被称为 Post Types，你可能或许有些混乱，因为它关联wordpress中所有不同的内容类型。例如：“文章”，是一种特殊的内容类型，也是一个“页面”。
+在 WordPress 中有很多不同的内容类型。这些内容类型被称为 Post Types，你可能或许有些混乱，因为它关联WordPress中所有不同的内容类型。例如：“文章”，是一种特殊的内容类型，也是一个“页面”。
 
 本质上，所有的内容类型都会被存储在数据库 wp_posts 这个表中，但是在数据库中通过 post_type 区分。
 
@@ -12,66 +12,68 @@
 
 ## 默认的内容类型
 
-wordpress在安装时，有五种默认的内容类型：
+WordPress在安装时，有五种默认的内容类型：
 
-- 文章 (Post Type: ‘post’)
-- 页面 (Post Type: ‘page’)
-- 多媒体 (Post Type: ‘attachment’)
-- 版本 (Post Type: ‘revision’)
-- 菜单 (Post Type: ‘nav_menu_item’)
+- 文章 (内容类型: ‘post’)
+- 页面 (内容类型e: ‘page’)
+- 多媒体 (内容类型: ‘attachment’)
+- 版本 (内容类型: ‘revision’)
+- 菜单 (内容类型: ‘nav_menu_item’)
 
 这些内容类型都是通过主题或者插件定制或者移除，但是我们不建议在主题和插件中删除内置功能。
 
-The most common post types you will interact with as a Theme Developer are Post, Page, Attachment, and Custom Post Types.  It’s out of the scope of this handbook to flesh out the Revision and Navigation Menu Post Types.  However, it is important to note that you will interact with and build the functionality of navigation menus and that will be detailed later in this handbook.
+一个主题开发者最长接触到的是 文章、页面、附件和自定义内容类型。版本与菜单内容类型不在我们这本手册的范围内，不过，重要的是要注意，导航菜单的功能也是经常会用到的，在本手册后面详细介绍这些功能。
 
 ## 文章（ Post ）
 
-Posts are used in blogs. They are:
+文章类型常用于博客，如下：
 
-- displayed in reverse sequential order by time, with the newest post first
-- have a date and time stamp
-- may have the default taxonomies of categories and tags applied
-- are used for creating feeds
+- 按时间倒叙显示，首先显示最新的文章；
+- 有日期和时间标记；
+- 可能应用默认类别和标签；
+- 用于创建 feeds；
 
-The template files that display the Post post type are:
+显示文章类型的模板文件如下：
 
-- single.php and single-post.php
-- category.php and all its iterations
-- tag.php and all its iterations
-- taxonomy.php and all its iterations
-- archive.php and all its iterations
-- author.php and all its iterations
-- date.php and all its iterations
+- single.php 和 single-post.php
+- category.php
+- tag.php
+- taxonomy.php
+- archive.php
+- author.php
+- date.php
 - search.php
 - home.php
 - index.php
 
-Additionally, theme developers can display Post post types in front-page.php if they so desire.
+此外，主题开发者按照意愿可以在front-page.php显示文章。
 
 ## 页面（ Page ）
 
-Pages are a static Post Type, outside of the normal blog stream/feed. Their features are:
+页面是一种静态的内容类型，通常不在博客内容流和feed中显示，它们的特色：
 
-- non-time dependent and without a time stamp
-- are not organized using the categories and/or tags taxonomies
-- can have page templates applied to them
-- can be organized in a hierarchical structure — i.e. pages can be parents/children of other pages
+- 不依赖时间戳
+- 不用分类目录和标签这种分类组织
+- 可以拥有自己的模板文件
+- 可以有父子等级结构
 
-The template files that display the Page post type are:
+显示页面的模板文件如下：
 
-- page.php and all its iterations
-- $custom.php and all its iterations
+- page.php
+- $custom.php
 - front-page.php
 - search.php
 - index.php
 
 
-## 多媒体（ Attachment ）
+## 附件（ Attachment ）
 
-Attachments are commonly used to display images or media in content, and may also be used to link to relevant files. Their features are:
+附件通常用于在内容中显示图片和多媒体，或许用于链接到相关的文件。它们的特点：
 
 - contain information (such as name or description) about files uploaded through the media upload system
 - for images, this includes metadata information stored in the wp_postmeta table (including size, thumbnails, location, etc)
+- 
+
 
 The template files that display the Attachment post type are:
 

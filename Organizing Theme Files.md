@@ -43,6 +43,6 @@ At this time there are no required folders within a WordPress theme. However, Wo
 
 > style.css should reside in the root directory of your theme not within the CSS directory.
 
-## Languages folder
+### Languages folder
 
 It’s best practice to internationalize your theme so it can be translated into other languages. Default themes include the languages folder, which contains a .pot file for translation and any translated .mo files. While languages is the default name of this folder, you can change the name. If you do so, you must update load_theme_textdomain().
