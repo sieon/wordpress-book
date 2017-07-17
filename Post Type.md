@@ -8,7 +8,7 @@
 
 如果你想增加默认的内容类型，你可以创建一个内容类型。
 
-模板文件页面显示的是根据不同模板文件来显示不同的内容类型，由于模板文件目的是以某种形式显示内容，所以实际上内容类型就是为了给你正在处理的内容进行一种分类。简单来说，某些内容类型与某些模板文件是绑定在一起的。
+模板文件页面上简要提到的不同内容类型，是根据不同模板文件来显示的。由于模板文件目的是以某种形式显示内容，所以实际上内容类型就是为了给你正在处理的内容进行一种分类。简单来说，某些内容类型与某些模板文件是绑定在一起的。
 
 ## 默认的内容类型
 
@@ -72,7 +72,7 @@ WordPress在安装时，有五种默认的内容类型：
 
 - contain information (such as name or description) about files uploaded through the media upload system
 - for images, this includes metadata information stored in the wp_postmeta table (including size, thumbnails, location, etc)
-- 
+-
 
 
 The template files that display the Attachment post type are:
